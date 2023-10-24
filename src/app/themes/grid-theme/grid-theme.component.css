@@ -1,0 +1,110 @@
+.instagram-title {
+    background: white;
+    color: black;
+    font-size: 24px;
+    height: 72px;
+    line-height: 72px;
+    vertical-align: middle;
+}
+
+.instagram-title a,
+.instagram-title a:hover,
+.instagram-title a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.instagram-title a:hover {
+    text-decoration: underline;
+}
+
+.instagram-container div {
+    padding: 0;
+}
+
+.instagram-container img {
+    width: 106px;
+    height: 106px;
+    border-radius: 0;
+}
+
+.instagram-container {
+    background-color: white;
+}
+
+.instagram-container > .dark {
+    background-color: black;
+}
+
+.click-for-more-photos {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.likes-container {
+    color: white;
+    background: rgba(0, 0, 0, 0.666);
+    position: absolute;
+    bottom: 0px;
+    right: 1px;
+    font-size: 8px;
+    font-family: sans-serif;
+}
+
+.dark .click-for-more-photos a {
+    color: gray;
+}
+
+.footer {
+    margin: 0 auto;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 12px;
+}
+
+.footer a, .footer a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.dark .footer,
+.dark .instagram-title {
+    background: black;
+}
+
+.dark .footer a,
+.dark .footer a:visited,
+.dark .instagram-title a,
+.dark .instagram-title a:hover,
+.dark .instagram-title a:visited {
+    color: white;
+}
+
+.affiliate-link {
+    background: linear-gradient(45deg, #9124d5, #cb2929);
+    animation: gradient 5s ease infinite;
+    background-size: 200% 100%;
+
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+

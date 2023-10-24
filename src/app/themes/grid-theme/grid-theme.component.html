@@ -1,0 +1,45 @@
+<div style="margin: 0; overflow: hidden; width: 320px;">
+	<div style="width: 320px; height: 500px; overflow-x: hidden; overflow-y: hidden;" class="instagram-container">
+		<div [className]="isDarkMode ? 'dark' : 'light'">
+
+			<div *ngIf="isMissingConfiguration" style="line-height: 18px; text-align: center; padding: 12px; font-family: Arial, sans-serif; font-size: 12px; color: grey;">
+				Instagram username not set.<br/>
+				Please configure My Instagram extension.
+			</div>
+
+			<div class="instagram-title">
+				<div style="height: 64px; width: 64px; float: left;">
+					<div style="padding: 8px;">
+						<a href="https://www.instagram.com/{{ username }}/" target="_blank">
+							<img [src]="profilePic" style="width: 48px; height: 48px; border-radius: 100%;" alt/>
+						</a>
+					</div>
+				</div>
+				<div style="float: left; width: 300px; background-color: black;">
+					<div style="color: white; font-size: 22px;">
+						{{ title }}
+					</div>
+					<div style="color: white; background: blue; font-size: 0.5em; font-family: sans-serif;">
+						<strong>{{ numberOfPosts | number }}</strong> posts
+						<strong>{{ followedBy | number }}</strong> followers
+						<strong>{{ following | number }}</strong> following
+					</div>
+				</div>
+				<br style="clear: both;"/>
+			</div>
+
+			<div style="font-size: 0; height: 428px; line-height: 12px; display: none;">
+
+				<div style="display: grid;" [style.gridTemplateColumns]="grid_template_columns" [style.gridGap]="border_padding" [style.padding]="0">
+					<div *ngFor="let photo of photos" style="float: left; margin: 0; height: 107px;">
+						<div style="position: relative; height: 106px;">
+							<a [href]="photo.url" target="_blank">
+								<img [src]="photo.img" alt [style.borderRadius]="border_radius" crossorigin="anonymous"/>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

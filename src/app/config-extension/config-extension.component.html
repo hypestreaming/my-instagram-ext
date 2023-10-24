@@ -1,0 +1,164 @@
+<div class="config-page-body" style="line-height: 24px;">
+	<div class="instagram-gradient-background" style="color: white; font-family: 'Droid Sans', sans-serif; font-size: 36px; font-weight: 700; text-align: center; margin-bottom: 16px; height: 64px; line-height: 64px;">
+		<img src="assets/apple-camera.png" class="instagram-camera-icon" alt/>
+		<span style="margin: 0 16px;">My Instagram Feed</span>
+	</div>
+
+	<div style="width: 600px; float: left;">
+
+		<div class="config-container" style="padding: 0 16px; max-width: 100%;">
+
+			<div class="config-description">
+
+				<h4 class="heading-2">Welcome!</h4>
+
+				<div class="text-block-4-round">
+					<p>
+						You can display the latest photos from ANY Instagram account in your Twitch channel. 🤤
+					</p>
+					<p>
+						Used by <strong>over 23,000</strong> creators with 180 million views 🤯🤑
+					</p>
+				</div>
+
+				<h4 class="heading-2" style="margin-top: 2em;">Getting Started:</h4>
+
+				<div class="text-block-4-round">
+
+					<div style="float: left; width: auto;">
+						Instagram username:
+					</div>
+
+					<div style="float: left; margin-left: 1em; width: 350px;">
+						<div>
+							<input type="text" (change)="onUsernameChanged($event)" [value]="username" class="form-control" style="width: 100%; margin-right: 8px;">
+						</div>
+						<div style="font-size: 0.75em; color: #eee; text-align: justify;">
+							Just enter the instagram username/handle here for the content you want to display!
+						</div>
+					</div>
+
+					<br style="clear: both;"/>
+
+					<div style="text-align: right;">
+						<div (click)="onUpdateClicked()">
+							<span style="padding: 6px 16px; cursor: pointer; color: white; background-color: #863EFF; border-radius: 100px;">
+								Save
+							</span>
+						</div>
+					</div>
+
+					<img src="assets/loading.gif" alt style="height: 32px;" *ngIf="show_loading"/>
+
+					<div style="font-size: 12px; color: grey;">{{ message }}</div>
+				</div>
+
+				<div class="text-block-4-round" style="margin-top: 1em;">
+					Activate extension as a Panel:<br/>
+					Visit "My Extensions" page and activate My Instagram!
+
+					<div style="text-align: right; margin-top: 1em;">
+						<a href="https://www.twitch.tv/dashboard/extensions/manage" target="_blank">
+							<span style="background-color: #863EFF; height: 1em; padding: 6px 16px; border-radius: 100px; color: white;">
+								My Extensions
+							</span>
+						</a>
+					</div>
+				</div>
+
+				<!--
+				<h4 class="heading-2" style="margin-top: 2em;">Subscribe to enable the plugin 🔔</h4>
+				<div class="text-block-4-round">
+					<p>
+						Already trusted by 23,000 creators and seen by 180 million viewers! 🎮💥
+					</p>
+					<p>
+						We help to boost engagement, attract premium advertisers, and amplify your earnings 📈💰
+					</p>
+				</div>
+				-->
+
+				<h4 class="heading-2" style="margin-top: 2em;">More extensions from Goose Wrappers 🎁</h4>
+
+				<div class="text-block-4-round">
+					<div style="float: left; width: 48px;">
+						<a href="https://dashboard.twitch.tv/extensions/016m5ut8s6cbdh9rmvx8gq1gempi4m" target="_blank">
+							<img src="assets/logo-my-wishlist.png" alt style="width: 48px; height: 48px; margin-right: 8px; "/>
+						</a>
+					</div>
+					<div style="float: left; width: auto;">
+						<p>
+							<strong>Amazon Wishlist</strong>
+						</p>
+						<p>
+							Show your Amazon Wishlist directly in your stream or channel page, and let your fans buy you the stuff you really need!
+						</p>
+					</div>
+					<br style="clear: both;"/>
+				</div>
+
+				<h4 class="heading-2" style="margin-top: 2em;">Contact us 📩</h4>
+
+				<div class="text-block-4-round">
+					If you have any feedback, questions, or issues:
+					Do not hesitate to reach out to our lovely support team at <a href="mailto:support@goosewrappers.dev" target="_blank">support@goosewrappers.dev</a>! ❤️
+				</div>
+			</div>
+
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+		</div>
+	</div>
+	<div style="float: left; width: 400px;">
+		<div style="margin-left: 60px;">
+			<h4 class="heading-2">Preview of your feed after sub:</h4>
+
+			<!--
+			<div class="text-block-4-round">
+				<p>
+					Support us by subscribing! Already trusted by 23,000 creators and
+					seen by 180 million viewers! 🎮💥
+				</p>
+
+				<p>
+					With interactive Instagram views, we help to <strong><em>boost engagement,
+					attract premium advertisers, and amplify your earnings 📈💰
+				</em></strong>
+				</p>
+
+				<p>
+					Every sub contributes to unlocking new, content creator focused features
+					designed by us to get you the right audience and advertisers! 🕹️🚀
+				</p>
+
+				<div style="text-align: right; cursor: pointer; margin-top: 1em;" (click)="onSubscribeClicked()">
+					<span style="background-color: #863EFF; height: 1em; padding: 6px 0 6px 16px; border-radius: 100px;">
+						Subscribe to enable
+						<span style="background-color: #531FAC; border-radius: 100px; padding: 6px;">
+							$4.99
+						</span>
+					</span>
+				</div>
+			</div>
+			-->
+
+			<div style="padding: 8px; border-radius: 16px; background-color: #292931; margin-top: 2em;">
+				<app-grid-theme
+					[username]="username"
+					[isDarkMode]="isDarkMode"
+					[title]="title"
+					[photos]="photos"
+					[profilePic]="profilePic"
+					[followedBy]="followedBy"
+					[following]="following"
+					[numberOfPosts]="numberOfPosts"
+				>
+				</app-grid-theme>
+			</div>
+		</div>
+	</div>
+	<br style="clear: both"/>
+</div>
