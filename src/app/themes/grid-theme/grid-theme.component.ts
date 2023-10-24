@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {LoggerService} from '../../services/logger.service';
-import {InstagramPhoto, InstagramService} from '../../services/instagram.service';
+import {InstagramPhoto} from '../../services/instagram.service';
 
 @Component({
 	selector: 'app-grid-theme',

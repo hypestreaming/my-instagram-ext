@@ -41,14 +41,14 @@
     color: white;
     background: rgba(0, 0, 0, 0.666);
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     right: 1px;
     font-size: 8px;
     font-family: sans-serif;
 }
 
 .dark .click-for-more-photos a {
-    color: gray;
+    color: grey;
 }
 
 .footer {

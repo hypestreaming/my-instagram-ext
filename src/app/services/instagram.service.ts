@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {LoggerService} from './logger.service';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Observable, Observer} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
 
 export interface InstagramPhoto {
 	img: string;
