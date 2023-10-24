@@ -12,7 +12,6 @@ export class GridThemeComponent {
 	border_radius = '0';
 	border_padding = '1';
 	grid_template_columns = '107px 107px 107px';
-	// grid_template_columns = '105px 105px 105px';
 
 	@Input() username = '';
 	@Input() title = 'My Instagram';

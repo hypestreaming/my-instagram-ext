@@ -18,13 +18,13 @@ export class ConfigExtensionComponent implements OnInit {
 	message = '';
 	show_loading = false;
 
-	username = '';
 	title = 'My Instagram';
 	isDarkMode = false;
 	photos: Array<InstagramPhoto> = [];
 
 	auth: TwitchAuthorization;
 
+	username = '';
 	profilePic = '';
 	following = -1;
 	followedBy = -1;

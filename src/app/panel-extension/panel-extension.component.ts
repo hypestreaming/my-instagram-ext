@@ -16,12 +16,18 @@ export class PanelExtensionComponent implements OnInit {
 
 	photos: Array<InstagramPhoto> = [];
 
-	username = '';
 	title = 'My Instagram';
 
 	isDarkMode = false;
 
 	isMissingConfiguration = false;
+
+	username = '';
+	profilePic = '';
+	following = -1;
+	followedBy = -1;
+	numberOfPosts = -1;
+
 
 	constructor(private http: HttpClient, private logger: LoggerService, private zone: NgZone, private ga: GoogleAnalyticsService) {
 		this.ga.trackPageView('Panel');
@@ -58,6 +64,11 @@ export class PanelExtensionComponent implements OnInit {
 
 		this.http.get(extension.cdnPrefix + '/' + auth.channelId + '.json').subscribe((response: any) => {
 			this.photos = response.photos;
+			this.profilePic = response.profilePic;
+			this.following = response.following;
+			this.followedBy = response.followedBy;
+			this.numberOfPosts = response.numberOfPosts;
+			this.username = response.username;
 		});
 	}
 
