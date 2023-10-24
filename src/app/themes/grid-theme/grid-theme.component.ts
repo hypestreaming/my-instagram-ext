@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {LoggerService} from '../../services/logger.service';
 import {InstagramPhoto, InstagramService} from '../../services/instagram.service';
 
@@ -26,4 +26,6 @@ export class GridThemeComponent {
 
 	constructor(private logger: LoggerService) {
 	}
+
+	protected readonly Math = Math;
 }

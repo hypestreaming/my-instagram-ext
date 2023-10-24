@@ -90,7 +90,7 @@ export class PanelExtensionComponent implements OnInit {
 
 		// on mobile, let's update the zoom
 		window.onresize = () => {
-			console.log('Window innerWidth ' + window.innerWidth);
+			this.logger.log('Window innerWidth ' + window.innerWidth);
 			if (window.innerWidth !== 320) {
 				const ratio = window.innerWidth / 320.0;
 				const body: HTMLBodyElement = document.getElementsByTagName('body')[0] as HTMLBodyElement;

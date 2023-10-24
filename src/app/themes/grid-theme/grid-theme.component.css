@@ -1,17 +1,12 @@
 .instagram-title {
-    background: white;
-    color: black;
-    font-size: 24px;
+    background: black;
     height: 72px;
-    line-height: 72px;
-    vertical-align: middle;
 }
 
 .instagram-title a,
 .instagram-title a:hover,
 .instagram-title a:visited {
     text-decoration: none;
-    color: black;
 }
 
 .instagram-title a:hover {

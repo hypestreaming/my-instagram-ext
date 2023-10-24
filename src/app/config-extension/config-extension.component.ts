@@ -77,6 +77,7 @@ export class ConfigExtensionComponent implements OnInit {
 			this.following = response.following;
 			this.followedBy = response.followedBy;
 			this.numberOfPosts = response.numberOfPosts;
+			this.username = response.username;
 		});
 	}
 

@@ -10,6 +10,7 @@ export interface InstagramPhoto {
 }
 
 export interface InstagramResponse {
+	username: string;
 	following: number;
 	followedBy: number;
 	profilePic: string;

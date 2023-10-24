@@ -8,27 +8,34 @@
 			</div>
 
 			<div class="instagram-title">
-				<div style="height: 64px; width: 64px; float: left;">
-					<div style="padding: 8px;">
+				<div style="height: 72px; width: 72px; float: left;">
+					<div style="padding: 12px;">
 						<a href="https://www.instagram.com/{{ username }}/" target="_blank">
 							<img [src]="profilePic" style="width: 48px; height: 48px; border-radius: 100%;" alt/>
 						</a>
 					</div>
 				</div>
-				<div style="float: left; width: 300px; background-color: black;">
-					<div style="color: white; font-size: 22px;">
+				<div style="float: left; width: calc(320px - 72px); background-color: black;">
+					<div style="color: white; font-size: 22px; padding-top: 12px;">
 						{{ title }}
 					</div>
-					<div style="color: white; background: blue; font-size: 0.5em; font-family: sans-serif;">
-						<strong>{{ numberOfPosts | number }}</strong> posts
-						<strong>{{ followedBy | number }}</strong> followers
-						<strong>{{ following | number }}</strong> following
+					<div style="color: white; font-size: 0.7em; font-family: sans-serif;">
+						<ul style="margin: 0; padding: 0; list-style: none; display: flex; justify-content: space-between; width: 80%;">
+							<li><strong>{{ numberOfPosts | number }}</strong> posts</li>
+							<ng-container *ngIf="followedBy < 100000">
+								<li><strong>{{ followedBy | number }}</strong> followers</li>
+							</ng-container>
+							<ng-container *ngIf="followedBy >= 100000">
+								<li><strong>{{ Math.floor(followedBy/1000) | number }}K</strong> followers</li>
+							</ng-container>
+							<li><strong>{{ following | number }}</strong> following</li>
+						</ul>
 					</div>
 				</div>
 				<br style="clear: both;"/>
 			</div>
 
-			<div style="font-size: 0; height: 428px; line-height: 12px; display: none;">
+			<div style="font-size: 0; height: 428px; line-height: 12px;">
 
 				<div style="display: grid;" [style.gridTemplateColumns]="grid_template_columns" [style.gridGap]="border_padding" [style.padding]="0">
 					<div *ngFor="let photo of photos" style="float: left; margin: 0; height: 107px;">
