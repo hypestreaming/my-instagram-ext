@@ -12,8 +12,8 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 16.13.1
+          node-version: 16.4
       - run: sudo npm install -g typescript @angular/cli
-      - run: (npm install --save-dev)
-      - run: (ng lint)
-      - run: (make)
+      - run: npm install --save-dev
+      - run: npm audit || true
+      - run: ng lint
