@@ -62,7 +62,8 @@ export class PanelExtensionComponent implements OnInit {
 	private onAuthorized(auth: TwitchAuthorization) {
 		this.logger.log('onAuthorized', auth);
 
-		this.http.get(extension.cdnPrefix + '/' + auth.channelId + '.json').subscribe((response: any) => {
+		const url = `${extension.cdnPrefix}/${auth.channelId}.json`;
+		this.http.get(url).subscribe((response: any) => {
 			this.photos = response.photos;
 			this.profilePic = response.profilePic;
 			this.following = response.following;
