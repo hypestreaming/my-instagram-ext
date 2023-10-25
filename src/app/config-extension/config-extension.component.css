@@ -2625,7 +2625,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .instagram-gradient-background {
-	background: url(/assets/instagram-title-background.png) no-repeat;
+	background: url(assets/instagram-title-background.png) no-repeat;
 	background-size: cover;
 }
 
