@@ -103,3 +103,10 @@
     }
 }
 
+.instagram-container-photos img {
+	transition: 0.1s linear;
+}
+.instagram-container-photos img:hover {
+	transform: scale(1.2);
+}
+

@@ -1,4 +1,4 @@
-<div style="margin: 0; overflow: hidden; width: 320px;">
+<div style="margin: 0; overflow: hidden; width: 320px; font-family: Arial, sans-serif;">
 	<div style="width: 320px; height: 500px; overflow-x: hidden; overflow-y: hidden;" class="instagram-container">
 		<div [className]="isDarkMode ? 'dark' : 'light'">
 
@@ -20,7 +20,7 @@
 						{{ title }}
 					</div>
 					<div style="color: white; font-size: 0.7em; font-family: sans-serif;">
-						<ul style="margin: 0; padding: 0; list-style: none; display: flex; justify-content: space-between; width: 80%;">
+						<ul style="margin: 0; padding: 0; list-style: none; display: flex; justify-content: space-between; width: 90%;">
 							<li><strong>{{ numberOfPosts | number }}</strong> posts</li>
 							<ng-container *ngIf="followedBy < 100000">
 								<li><strong>{{ followedBy | number }}</strong> followers</li>
@@ -35,11 +35,10 @@
 				<br style="clear: both;"/>
 			</div>
 
-			<div style="font-size: 0; height: 428px; line-height: 12px;">
-
+			<div style="font-size: 0; height: 428px; line-height: 12px;" class="instagram-container-photos">
 				<div style="display: grid;" [style.gridTemplateColumns]="grid_template_columns" [style.gridGap]="border_padding" [style.padding]="0">
 					<div *ngFor="let photo of photos" style="float: left; margin: 0; height: 107px;">
-						<div style="position: relative; height: 106px;">
+						<div style="position: relative; height: 106px; overflow: hidden;">
 							<a [href]="photo.url" target="_blank">
 								<img [src]="photo.img" alt [style.borderRadius]="border_radius" crossorigin="anonymous"/>
 							</a>
