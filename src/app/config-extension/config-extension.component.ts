@@ -1,6 +1,6 @@
 import {Component, NgZone, OnInit} from '@angular/core';
 import {LoggerService} from '../services/logger.service';
-import {TwitchAuthorization, TwitchContext, TwitchWindow} from 'hype-twitch-types';
+import {TwitchAuthorization, TwitchContext, TwitchWindow} from 'twitch-typings';
 import {HttpClient} from '@angular/common/http';
 import {GoogleAnalyticsService} from '../services/google-analytics.service';
 import {InstagramResponse, InstagramService} from '../services/instagram.service';

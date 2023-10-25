@@ -1,6 +1,6 @@
 {
-  "name": "ext",
-  "version": "0.0.0",
+  "name": "my-instagram-ext",
+  "version": "2023.10.05",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -20,13 +20,12 @@
     "@angular/platform-browser-dynamic": "^12.2.15",
     "@angular/router": "^12.2.15",
     "core-js": "^2.6.11",
-    "hype-twitch-types": "git+https://704c7d6d228a3b810c7ff37221ba2ae0da185499:x-oauth-basic@github.com/gmegidish/hype-twitch-types.git",
     "rxjs": "^6.5.5",
     "tslib": "^1.13.0",
+    "twitch-typings": "github:hypestreaming/twitch-typings",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "codelyzer": "^6.0.0",
     "@angular-devkit/build-angular": "^12.2.14",
     "@angular/cli": "^12.2.14",
     "@angular/compiler-cli": "^12.2.15",
@@ -34,6 +33,7 @@
     "@types/jasmine": "^2.8.16",
     "@types/jasminewd2": "^2.0.8",
     "@types/node": "^12.11.1",
+    "codelyzer": "^6.0.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~6.3.9",
