@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {LoggerService} from './logger.service';
 import {HttpClient} from '@angular/common/http';
+import {extension} from '../../environments/extension';
 
 export interface InstagramPhoto {
 	img: string;
@@ -25,7 +26,7 @@ export class InstagramService {
 
 	public async getPhotos(token: string, username: string): Promise<InstagramResponse> {
 
-		const url = 'https://gl60oi4x51.execute-api.us-east-1.amazonaws.com/dev/api/myinstagram.get_photos';
+		const url = extension.serverEndpoint + '/api/myinstagram.get_photos';
 		this.logger.log('Fetching photos for user ' + username + ' through url ' + url);
 
 		const httpOptions = {
