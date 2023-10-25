@@ -18,8 +18,7 @@ jobs:
       - run: npm audit --omit=dev || true
       - run: ng lint
       - run: ng build --configuration production
-      - run: (cd dist; zip -rp9 ../extension.zip *)
       - uses: actions/upload-artifact@v3
         with:
-          name: extension.zip
-          path: extension.zip
+          name: my-instagram-release.zip
+          path: dist/
