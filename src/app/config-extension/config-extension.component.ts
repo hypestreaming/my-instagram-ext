@@ -122,6 +122,11 @@ export class ConfigExtensionComponent implements OnInit {
 	}
 
 	onSubscribeClicked() {
+		const height = window.screen.availHeight;
+		const width = 0.80 * window.screen.availWidth;
+		const left = Math.floor((window.screen.width - width) / 2);
+		window.open("https://www.twitch.tv/subs/goosewrappers", "_blank", `menubar=1,resizable=1,width=${width},height=${height},left=${left}`);
+		return false;
 	}
 
 	private onConfigurationChanged(window: TwitchWindow) {
